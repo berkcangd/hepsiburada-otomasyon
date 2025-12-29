@@ -1,0 +1,77 @@
+[
+  {
+    "key": "Cookie_Kabul_Butonu",
+    "value": "onetrust-accept-btn-handler",
+    "type": "id"
+  },
+  {
+    "key": "Hepsiburada_Logo",
+    "value": "a[title='Hepsiburada']",
+    "type": "css"
+  },
+  {
+    "key": "Giris_Menusu",
+    "value": "myAccount",
+    "type": "id"
+  },
+  {
+    "key": "Giris_Yap_Link",
+    "value": "login",
+    "type": "id"
+  },
+  {
+    "key": "Email_Kutusu",
+    "value": "txtUserName",
+    "type": "id"
+  },
+  {
+    "key": "Giris_Yap_Butonu",
+    "value": "btnLogin",
+    "type": "id"
+  },
+  {
+    "key": "Sifre_Kutusu",
+    "value": "txtPassword",
+    "type": "id"
+  },
+  {
+    "key": "Arama_Kutusu",
+    "value": "input[placeholder='Ürün, kategori veya marka ara']",
+    "type": "css"
+  },
+  {
+    "key": "Urun_Listesi",
+    "value": "li[id^='i']",
+    "type": "css"
+  },
+  {
+    "key": "Sepete_Ekle_Butonu",
+    "value": "//button[normalize-space()='Sepete ekle']",
+    "type": "xpath"
+  },
+  {
+    "key": "Tumunu_Sil_Popup_Butonu",
+    "value": "//button[normalize-space()='Tümünü sil']",
+    "type": "xpath"
+  },
+  {
+    "key": "Sepet_Urun_Ismi",
+    "value": "div[class*='product_name'] a",
+    "type": "css"
+  },
+  {
+    "key": "Urun_Detay_Basligi",
+    "value": "//h1[@id='product-name' or contains(@class, 'product-name') or self::h1]",
+    "type": "xpath"
+  },
+  {
+    "key": "Sepet_Sil_Butonu",
+    "value": ".basket_delete_1U-UX",
+    "type": "css"
+  },
+  {
+    "key": "Sepet_Bos_Mesaji",
+    "value": "//*[contains(text(),'Sepetin şu an boş')]",
+    "type": "xpath"
+  }
+]

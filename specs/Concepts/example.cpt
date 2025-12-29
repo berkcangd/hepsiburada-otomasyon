@@ -1,0 +1,26 @@
+# Hepsiburada anasayfasına gidilir.
+* Url "https://www.hepsiburada.com" adresine git
+
+# Çerez adımları kabul edilir.
+* Element "Cookie_Kabul_Butonu" gorunur olana kadar bekle
+* Element "Cookie_Kabul_Butonu" tikla
+
+# Kullanıcı giris yapar
+* Kullanici "standart_kullanici" bilgileriyle giris yap (JSON)
+
+# Sepet doluysa boşaltılır.
+* Sepeti tamamen bosalt
+
+# Arama butonundan ürün (bilgisayar) araması yapılır.
+* Element "Arama_Kutusu" alanina "bilgisayar" yaz ve Enter'a bas
+* Element "Urun_Listesi" gorunur olana kadar bekle
+
+# Ürün seçilir (2.satır 1.sütun).
+* Listeden "5". urunu sec ve tikla
+* Element "Sepete_Ekle_Butonu" gorunur olana kadar bekle
+
+# Sepete ürün eklenir ve doğruluğu kontrol edilir.
+* Urun detay sayfasindaki urun ismini hafizaya al
+* Element "Sepete_Ekle_Butonu" tikla
+* "3" saniye bekle
+* Sepet kontrolu ve urun dogrulamasi yap
