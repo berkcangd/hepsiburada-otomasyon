@@ -1,33 +1,33 @@
-## About this template
+# 🛒 Hepsiburada E2E Test Automation Project
 
-This is a template to get started with a Gauge project that uses Selenium as the driver to interact with a web browser.
+Bu proje, **Hepsiburada.com** web sitesi için geliştirilmiş, ölçeklenebilir ve sürdürülebilir bir uçtan uca (E2E) test otomasyon projesidir. **Java** dili, **Gauge** framework'ü ve **Selenium WebDriver** kullanılarak geliştirilmiştir.
 
-## Installing this template
+## 🚀 Proje Hakkında
+Proje, gerçek bir kullanıcının alışveriş deneyimini simüle eder. Page Object Model (POM) yapısına sadık kalınarak, elementler ve aksiyonlar birbirinden ayrıştırılmıştır. Veri odaklı (Data Driven) test yaklaşımı ile kullanıcı verileri dış kaynaklardan (JSON ve Environment Variables) yönetilmektedir.
 
-    gauge --install java_maven_selenium
+### 🧪 Test Senaryosu
+1.  Hepsiburada anasayfasına gidilir ve çerezler (Cookie) yönetilir.
+2.  **Hibrit Giriş Modu:** Kullanıcı bilgileri güvenli bir şekilde Environment Variable veya JSON dosyasından okunarak giriş yapılır.
+3.  Sepet kontrol edilir, doluysa akıllı temizleme (Smart Clean) mekanizması ile boşaltılır.
+4.  Parametrik olarak belirlenen ürün (örn: "Bilgisayar") aranır.
+5.  Arama sonuçlarından dinamik olarak belirlenen sıradaki (örn: 5. ürün) ürün seçilir.
+6.  Ürün detay sayfasındaki isim hafızaya alınır ve sepete eklenir.
+7.  Sepete gidilerek, eklenen ürün ile hafızadaki ürünün eşleşip eşleşmediği doğrulanır.
 
-## Building on top of this template
+## 🛠️ Kullanılan Teknolojiler ve Araçlar
+* **Dil:** Java (JDK 17+)
+* **Framework:** [Gauge](https://gauge.org/) (BDD - Behavior Driven Development)
+* **Web Driver:** Selenium WebDriver (v4.16+)
+* **Build Tool:** Maven
+* **Veri Yönetimi:** GSON (JSON Parsing)
+* **Locator Yönetimi:** JSON tabanlı element yönetimi
 
-### Defining Specifications
+## ⭐ Öne Çıkan Teknik Özellikler
 
-* This template includes a sample specification which opens up a browser and navigates to `Get Started` page of Gauge.
-* Add more specifications on top of sample specification.
+* **🛡️ Hibrit Veri Yönetimi:** Hassas veriler (Şifre vb.) kod içinde saklanmaz. Environment Variable öncelikli olmak üzere JSON dosyasından okuma yapan hibrit bir yapı kurulmuştur.
+* **🔄 Retry Mechanism (Tekrar Deneme):** `StaleElementReferenceException` gibi geçici hatalarda testi patlatmak yerine, belirli aralıklarla tekrar deneyen kararlı (stable) metotlar yazılmıştır.
+* **⚡ JavaScript Executor Fallback:** Selenium'un standart tıklama yönteminin engellendiği durumlarda (Overlay, Popup vb.), otomatik olarak JavaScript ile müdahale eden akıllı tıklama fonksiyonları kullanılmıştır.
+* **🧹 Akıllı Sepet Temizliği:** Sepetin boş olup olmadığını kontrol eden, doluysa temizleyen ve çıkan popup'ları otomatik yöneten dinamik bir yapı mevcuttur.
+* **Wait Strategy:** `Thread.sleep` yerine `WebDriverWait` (Explicit Wait) kullanılarak test süresi optimize edilmiştir.
 
-Read more about [Specifications](http://getgauge.io/documentation/user/current/specifications/README.html)
-
-### Writing the implementations
-
-This is where the java implementation of the steps would be implemented. Since this is a Selenium based project, the java implementation would invoke Selenium APIs as required.
-
-_We recommend considering modelling your tests using the [Page Object](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) pattern, and the [Webdriver support](https://github.com/SeleniumHQ/selenium/wiki/PageFactory) for creating them._
-
-- Note that every Gauge step implementation is annotated with a `Step` attribute that takes the Step text pattern as a parameter.
-Read more about [Step implementations in Java](http://getgauge.io/documentation/user/current/test_code/java/java.html)
-
-### Execution
-
-* You can execute the specification as:
-
-```
-mvn test
-```
+## 📂 Proje Yapısı
